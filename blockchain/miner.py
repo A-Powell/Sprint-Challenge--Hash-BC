@@ -23,7 +23,7 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
-    proof = random.randint(-2147483648, 2147483648)
+    proof = random.randint(-2147483648, 2147483647)
     while not valid_proof(previous_hash, proof):
         proof += 1
 
